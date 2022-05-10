@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Prompt from "./components/prompt/Prompt";
-import Response from "./components/response/Response";
+import Response from "./components/response/Responses";
 
 function App() {
   return (
