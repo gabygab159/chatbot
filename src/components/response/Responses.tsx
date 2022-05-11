@@ -1,4 +1,8 @@
-export default function Responses() {
+type Props = {
+  prompts: string[];
+};
+
+export default function Responses(props: Props) {
   return (
     <div>
       <h1>Responses</h1>
