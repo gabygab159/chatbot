@@ -1,11 +1,10 @@
 .App {
   text-align: center;
+  padding: 25px;
 }
 
-
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sassyHeader {
+  font-family: 'roboto', sans-serif;
+  font-size: 50px;
+  color: rgba(66, 153, 225, 1);
 }
