@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/gabygab159/chatbot/static/css/main.fd389305.css",
-    "main.js": "/gabygab159/chatbot/static/js/main.824b2fee.js",
-    "static/js/787.8fb4aeac.chunk.js": "/gabygab159/chatbot/static/js/787.8fb4aeac.chunk.js",
-    "index.html": "/gabygab159/chatbot/index.html",
-    "main.fd389305.css.map": "/gabygab159/chatbot/static/css/main.fd389305.css.map",
-    "main.824b2fee.js.map": "/gabygab159/chatbot/static/js/main.824b2fee.js.map",
-    "787.8fb4aeac.chunk.js.map": "/gabygab159/chatbot/static/js/787.8fb4aeac.chunk.js.map"
+    "main.css": "/static/css/main.fd389305.css",
+    "main.js": "/static/js/main.92e5e686.js",
+    "static/js/787.8fb4aeac.chunk.js": "/static/js/787.8fb4aeac.chunk.js",
+    "index.html": "/index.html",
+    "main.fd389305.css.map": "/static/css/main.fd389305.css.map",
+    "main.92e5e686.js.map": "/static/js/main.92e5e686.js.map",
+    "787.8fb4aeac.chunk.js.map": "/static/js/787.8fb4aeac.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fd389305.css",
-    "static/js/main.824b2fee.js"
+    "static/js/main.92e5e686.js"
   ]
 }
