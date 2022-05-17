@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/gabygab159/chatbot/static/css/main.fd389305.css",
+    "main.js": "/gabygab159/chatbot/static/js/main.824b2fee.js",
+    "static/js/787.8fb4aeac.chunk.js": "/gabygab159/chatbot/static/js/787.8fb4aeac.chunk.js",
+    "index.html": "/gabygab159/chatbot/index.html",
+    "main.fd389305.css.map": "/gabygab159/chatbot/static/css/main.fd389305.css.map",
+    "main.824b2fee.js.map": "/gabygab159/chatbot/static/js/main.824b2fee.js.map",
+    "787.8fb4aeac.chunk.js.map": "/gabygab159/chatbot/static/js/787.8fb4aeac.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fd389305.css",
+    "static/js/main.824b2fee.js"
+  ]
+}
