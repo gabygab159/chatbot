@@ -1,6 +1,6 @@
-import { Alert, AlertIcon, Button, FormControl, Input } from "@chakra-ui/react";
-import React, { useState } from "react";
+import { Alert, AlertIcon, Button, Input } from "@chakra-ui/react";
 import { Configuration, OpenAIApi } from "openai";
+import React, { useState } from "react";
 import { BotResponse } from "../../App";
 
 const configuration = new Configuration({
