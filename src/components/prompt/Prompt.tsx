@@ -23,6 +23,7 @@ export default function Prompt(props: Props) {
   const { prompts, setPrompts, setResponses, responses } = props;
   const [isValid, setIsValid] = useState(true);
 
+
   const handlePromptChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPrompts([e.target.value]);
   };
@@ -70,30 +71,32 @@ export default function Prompt(props: Props) {
           Please fill out both fields.
         </Alert>
       ) : null}
-      <label placeholder="Where did you eat?">Restaurant Name:</label>
-      <Input
-        value={restaurant}
-        onChange={handleRestaurantChange}
-        marginY={4}
-      ></Input>
+      <form>
 
-      <Text>Review</Text>
-      <Input
-        placeholder="How was it? ... be honest"
-        value={prompts}
-        onChange={handlePromptChange}
-        isRequired
-        marginY={4}
-      ></Input>
-      <Button
-        isLoading={isLoading}
-        type="submit"
-        onClick={handleSubmit}
-        m={3}
-        marginLeft="auto"
-      >
-        Submit
-      </Button>
+        <label placeholder="Where did you eat?">Restaurant Name:</label>
+        <Input
+          value={restaurant}
+          onChange={handleRestaurantChange}
+          marginY={4}
+        ></Input>
+        <Text>Review</Text>
+        <Input
+          placeholder="How was it? ... be honest"
+          value={prompts}
+          onChange={handlePromptChange}
+          isRequired
+          marginY={4}
+        ></Input>
+        <Button
+          isLoading={isLoading}
+          type="submit"
+          onClick={handleSubmit}
+          m={3}
+          marginLeft="auto"
+        >
+          Submit
+        </Button>
+      </form>
     </div >
   );
 }
