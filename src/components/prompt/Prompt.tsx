@@ -32,6 +32,11 @@ export default function Prompt(props: Props) {
     setRestaurant(e.target.value);
   };
 
+  const handleReset = () => {
+    setPrompts([]);
+    setRestaurant("");
+  }
+
   const handleSubmit = async (
     e: React.FormEvent<HTMLButtonElement>
   ): Promise<void> => {
@@ -61,6 +66,7 @@ export default function Prompt(props: Props) {
     };
     setResponses([newResponse, ...responses]);
     setIsLoading(false);
+    handleReset();
   };
 
   return (
