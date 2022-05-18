@@ -2,7 +2,16 @@ h3 {
   font-weight: 700;
 }
 
+.response-container {
+  display: flex;
+}
+
+.response-box {
+  display: flex;
+  flex-direction: column;
+}
 .response {
   font-style: italic;
   list-style-type: none;
+  padding-top: 9px;
 }

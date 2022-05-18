@@ -1,5 +1,18 @@
-import { Box, Button, Container, Skeleton, SkeletonText } from "@chakra-ui/react";
 import { DeleteIcon } from "@chakra-ui/icons";
+import {
+  Box,
+  Button,
+  Container,
+  IconButton,
+  Modal,
+  ModalBody,
+  ModalCloseButton,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  ModalOverlay,
+  useDisclosure
+} from "@chakra-ui/react";
 import { BotResponse } from "../../App";
 import "./responses.css";
 
@@ -10,9 +23,9 @@ type Props = {
 };
 
 export default function Responses(props: Props) {
-
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const handleRemove = (id: number) => {
-    console.log('deleted response', id);
+
     const newResponses = props.responses.filter((response, index) => index !== id);
     props.setResponses(newResponses);
   }
@@ -28,13 +41,31 @@ export default function Responses(props: Props) {
             boxShadow={"md"}
             rounded={"md"}
           >
-            <Box p={3}>
-              <div key={index}>
-                <h3>Bot describes {response.name} as :</h3>
+            <Box p={3} className={"response-container"}>
+              <div key={index} className={"response-box"}>
+                <h3>Bot describes <strong>{response.name}</strong> as :</h3>
                 <li className="response">{response.response}</li>
               </div>
-              <Button leftIcon={<DeleteIcon />} onClick={() => handleRemove(index)} />
+              <IconButton icon={<DeleteIcon />} onClick={onOpen} aria-label={"Delete response"} />
             </Box>
+            <Modal onClose={onClose} isOpen={isOpen} isCentered motionPreset="scale" closeOnEsc>
+              <ModalOverlay />
+              <ModalContent>
+                <ModalHeader>Careful now...</ModalHeader>
+                <ModalCloseButton />
+                <ModalBody>
+                  <p>Are you sure you want to delete this response?</p>
+                </ModalBody>
+                <ModalFooter>
+                  <Button variant="ghost" onClick={onClose}>
+                    Cancel
+                  </Button>
+                  <Button variant="ghost" onClick={() => handleRemove(index)}>
+                    Delete
+                  </Button>
+                </ModalFooter>
+              </ModalContent>
+            </Modal>
           </Container>
         );
       })}

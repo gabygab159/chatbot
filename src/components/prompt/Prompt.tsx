@@ -1,4 +1,4 @@
-import { Alert, AlertIcon, Button, Input } from "@chakra-ui/react";
+import { Alert, AlertIcon, Button, Input, Text } from "@chakra-ui/react";
 import { Configuration, OpenAIApi } from "openai";
 import React, { useState } from "react";
 import { BotResponse } from "../../App";
@@ -75,7 +75,7 @@ export default function Prompt(props: Props) {
         marginY={4}
       ></Input>
 
-      <label htmlFor="prompt">Review</label>
+      <Text>Review</Text>
       <Input
         placeholder="How was it? ... be honest"
         value={prompts}
@@ -92,6 +92,6 @@ export default function Prompt(props: Props) {
       >
         Submit
       </Button>
-    </div>
+    </div >
   );
 }
