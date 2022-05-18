@@ -34,6 +34,7 @@ export default function Prompt(props: Props) {
   const handleSubmit = async (
     e: React.FormEvent<HTMLButtonElement>
   ): Promise<void> => {
+    // validate input - no empty fields
     if (restaurant === "" || prompts[0] === "") {
       setIsValid(false);
       return;
@@ -42,6 +43,7 @@ export default function Prompt(props: Props) {
     e.preventDefault();
     setIsLoading(true);
     setIsValid(true);
+    // get response from openai
     const response: any = await openai.createCompletion("text-curie-001", {
       prompt:
         `Write a sarcastic and negative restaurant review based on these notes:\n\nName:` +

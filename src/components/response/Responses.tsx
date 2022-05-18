@@ -25,7 +25,6 @@ type Props = {
 export default function Responses(props: Props) {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const handleRemove = (id: number) => {
-
     const newResponses = props.responses.filter((response, index) => index !== id);
     props.setResponses(newResponses);
   }
