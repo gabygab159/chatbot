@@ -1,4 +1,5 @@
-import { Box, Container } from "@chakra-ui/react";
+import { Box, Button, Container, Skeleton, SkeletonText } from "@chakra-ui/react";
+import { DeleteIcon } from "@chakra-ui/icons";
 import { BotResponse } from "../../App";
 import "./responses.css";
 
@@ -9,6 +10,13 @@ type Props = {
 };
 
 export default function Responses(props: Props) {
+
+  const handleRemove = (id: number) => {
+    console.log('deleted response', id);
+    const newResponses = props.responses.filter((response, index) => index !== id);
+    props.setResponses(newResponses);
+  }
+
   return (
     <>
       {props.responses.map((response, index) => {
@@ -25,6 +33,7 @@ export default function Responses(props: Props) {
                 <h3>Bot describes {response.name} as :</h3>
                 <li className="response">{response.response}</li>
               </div>
+              <Button leftIcon={<DeleteIcon />} onClick={() => handleRemove(index)} />
             </Box>
           </Container>
         );
